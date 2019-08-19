@@ -1,0 +1,18 @@
+version: '3'
+services:
+    web:
+        build: .
+        command: python app/app.py
+        depends_on:
+            - postgres
+        volumes:
+            - .:/usr/src/app
+        ports:
+            - '5000:5000'
+        environment:
+            DATABASE_URL: postgres://db@postgres/db
+    postgres:
+        image: postgres:9.6.2-alpine
+        environment:
+            POSTGRES_USER: db
+            POSTGRES_DB: db
