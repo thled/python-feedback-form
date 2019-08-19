@@ -11,6 +11,9 @@
         <main>
             <img src="../static/logo.png" alt="The main logo of the site" />
 
+            {% if message %}
+            <p class="message">{{ message | safe }}</p>
+            {% endif %}
             <form action="/submit" method="POST">
                 <fieldset>
                     <label for="name">Name</label>
@@ -19,7 +22,7 @@
 
                 <fieldset>
                     <label for="industry">Industry</label>
-                    <select id="industry" name="industy">
+                    <select id="industry" name="industry">
                         <option value="">Select Industry</option>
                         <option value="accounting">Accounting</option>
                         <option value="education">Education</option>
