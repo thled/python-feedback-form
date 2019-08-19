@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="../static/style.css" />
+        <title>Rate your Workplace!</title>
+    </head>
+    <body>
+        <main>
+            <img src="../static/logo.png" alt="The main logo of the site" />
+
+            <form action="/submit" method="POST">
+                <fieldset>
+                    <label for="name">Name</label>
+                    <input id="name" type="text" name="name" placeholder="Your name" />
+                </fieldset>
+
+                <fieldset>
+                    <label for="industry">Industry</label>
+                    <select id="industry" name="industy">
+                        <option value="">Select Industry</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="education">Education</option>
+                        <option value="commerce">Commerce</option>
+                        <option value="it">IT</option>
+                        <option value="law">Law</option>
+                        <option value="media">Media</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <label for="rating">Rating</label>
+                    <input type="radio" name="rating" value="1" checked /> 1
+                    <input type="radio" name="rating" value="2" /> 2
+                    <input type="radio" name="rating" value="3" /> 3
+                    <input type="radio" name="rating" value="4" /> 4
+                    <input type="radio" name="rating" value="5" /> 5
+                </fieldset>
+
+                <input type="submit" value="Submit" />
+            </form>
+        </main>
+    </body>
+</html>
