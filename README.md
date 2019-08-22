@@ -15,5 +15,5 @@ This is my first Python app. Just testing things and trying to get a good develo
 
 ## Usage
 
-Go to `localhost:5000`
-
+1. Go to `localhost:5000/initdb` to initialize the DB.
+1. Then go to `localhost:5000` and use the app.

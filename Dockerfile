@@ -18,5 +18,3 @@ RUN pip install -r requirements.txt
 ENV PYTHONUNBUFFERED 1
 
 COPY ./app .
-
-# CMD ["python", "from app import db; db.create_all()"]

@@ -11,8 +11,13 @@
         <main>
             <img src="../static/logo.png" alt="The main logo of the site" />
 
-            <h1>Thank you!</h1>
-            <p>The results will be shown here soon.</p>
+            <h1>Thank you, {{ name }}!</h1>
+
+            <h2>People who also rated:</h2>
+
+            {% for user in users %}
+            <p>{{ user.name }}</p>
+            {% endfor %}
         </main>
     </body>
 </html>

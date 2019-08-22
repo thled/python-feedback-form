@@ -24,6 +24,13 @@ class Feedback(db.Model):
         self.rating = rating
 
 
+@app.route("/initdb")
+def initdb():
+    db.create_all()
+    print("InitDB")
+    return "InitDB"
+
+
 @app.route("/")
 def index():
     return render_template("index.html")
@@ -43,7 +50,9 @@ def submit():
             data = Feedback(mail, name, industry, rating)
             db.session.add(data)
             db.session.commit()
-            return render_template("success.html")
+            return render_template(
+                "success.html", name=name, users=Feedback.query.all()
+            )
 
         return render_template(
             "index.html", message="You already submitted your rating!"
