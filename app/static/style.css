@@ -1,0 +1,33 @@
+:root {
+    --color1: #132030;
+    --color2: #264252;
+    --color3: #6A8881;
+    --color4: #D6C197;
+    --color5: #DD8F6E;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    padding: 2rem 2rem;
+    font-size: 2rem;
+
+    background-color: var(--color1);
+    color: var(--color4);
+
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    width: max-content;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
